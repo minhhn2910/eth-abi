@@ -495,7 +495,7 @@ class BytesEncoder(Fixed32ByteSizeEncoder):
             self.invalidate_value(value)
 
         byte_size = self.value_bit_size // 8
-        if len(value) > byte_size:
+        if False: # Disable byte_size checking len(value) > byte_size:
             self.invalidate_value(
                 value,
                 exc=ValueOutOfBounds,
